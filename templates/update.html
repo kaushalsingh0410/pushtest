@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+  Update
+{% endblock title %}
+{% block body %}
+
+    <div class="container mb-3">
+      <form method = 'POST' action = '/update/{{todo.sno}}'>
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" class="form-control" id="title" name = 'title' value = '{{todo.title}}' aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea  class="form-control" rows="5" name = 'description'  id = 'description'>{{todo.description}}</textarea>
+          <!-- <input type="textarea" class="form-control" id="exampleInputPassword1"> -->
+        </div>
+        
+        <button type="submit" class="btn btn-outline-primary form-control">Update</button>
+      </form>
+    </div>
+
+ 
+
+{% endblock body %}
+  
